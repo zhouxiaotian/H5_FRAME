@@ -1,0 +1,101 @@
+html {
+	font-size: 100px;
+}
+
+html,
+body {
+	height: 100%;
+	background: #EEE;
+	overflow: hidden;
+}
+
+.mainBox {
+	max-width: 750px;
+	margin: 0 auto;
+	height: 100%;
+	background: #FFF;
+}
+
+.swiper-container,
+.swiper-slide {
+	height: 100%;
+	overflow: hidden;
+}
+
+.swiper-slide {
+	position: relative
+}
+
+.PREBTN_BG {
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAqCAYAAADxughHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMDc5NTM5Qzk3MEMxMUU0ODVBMTlEQUZBQTlBRjYzNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMDc5NTM5RDk3MEMxMUU0ODVBMTlEQUZBQTlBRjYzNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYwNzk1MzlBOTcwQzExRTQ4NUExOURBRkFBOUFGNjM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkYwNzk1MzlCOTcwQzExRTQ4NUExOURBRkFBOUFGNjM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+vbfuewAABFhJREFUeNrMmVlIlFEUx9VSp7EsKFvEFqIilyJoBTUzy2iBFssW0taHFugp6q0egnoqabHoQaGsqDRJEyoqKiMrHyrTFoiijfbVTKlpnP4XzsDH9Zxv5hu/Lz3wA73f3f733nPuMuE+ny/MYesF5tHfZ8F3JxoJd1hIT1ADkuj/ejAJNNvdUISDIrqAYwYRykaBfY60pmbEIXb5ZFtud3tOLa2l4LhausL3X2A8eNyZfWQsqAbuAPkawES7/MVuH+lHkUkX8Qa809JSwP7O6CNR4CbjD7/BRJANWpnveXa0b6eQIsGx1xjy7Ga+N4HEziJkkyDisJYvGtxn8tUDd0cLyQJ/mc7V0HLT8yeBZiZ/UUcKGQY+M516C+JNyq0XZjCvI4TE0pLgnDs1QFkV9ivt9JdQRaiOVAijuiHIOuLAO6Z8Qyj+EqqQHYKIYov1SCG5+H8IyRUar6WoZLW+AmFQ8p0UMgb8Yhr9CBJCnF0lvq69/mKlQbWmXzENekCGSTkXDcAY+jvMQkgO2l+CPWtFgTNgIPNtM7gulHOB1XRDVKwCXZl8j6ge3ZLBATsPjaqydCa9BOyVTtZgPuirHSpnCPkPgSomXYnPt+MYv1EYlXsgzeQYPhVMFr6dBE+Y9DjwAPTX0lUb48zuL4FmJBMUMOmfwQITEcnCDPptLt3ndftEM6CPrroWlJndccyEDAWnQKSW7qUb4AuhXH/yh3CTurvRQHDtXxDu9eruX2hVSAxdkOKYb1vBZZNySxjxjaBJSxsMMoR6ttIS022l5C8RgpOW0IuHbqfBHpNXk0X0jqXPYKngyOkkSLffYBloEYJCYjBCtlO00a1eWL9+U9FoCJN+Ebwm565j2s+hpabbQ7CFSWf9RReiKt3GFP5G4ppNHhwmMOmq47Xa+m/U8sSS83M+VSjMZBt/MQoZDY4yFXppmp8JIgaBWUz6e6YTaqmcY2Z1JD0PtXlSAGupLs5fVuhClFNXCOFtO40kZ2o0F5N/6B1WEc/DlHlKe5Bu2cz+oewDnQ64JX3Q/5IZQcePUmF9l4OdgohIilAxzCiW03KUTPnNDy2tKy3tSCb/eSEku6nvbrWzqyiwjj54DGHyOW2IP4XO5AiR7RoRyNQ+lccs5bugUji3qXpH0P/dDaKPhPrSmAqmC8vmhElk02224Btl9BLp6EvjcJAlRLZyCyKUXQJfmfQ5zH5kq5DetKT0ch5y7haL9f2hIONjltFCJojYIsRFZywX861KCJHB2Etwh0lPAFPsFhJBh7w+zLdaZse2alfAFyY9jYKCbUIyDdHCaK8plLbXPHRIbRUuZzF2CEmhkdGtiWK416YfBtSg3GLSewRxLQgoZIBwDmolEY02/75yFXwUIuWkUIVIdwt/2HzpwE92f4UlpmwaiLcqRIW9XOE6qo7Xt8Ocs7fghtAnFfqjrQiZabjweGl/aKFGKixueqFYNfmMv12vYR/jTtph/wQYAJzxVIS3UebnAAAAAElFTkSuQmCC") no-repeat;
+	background-size: 100% 100%;
+}
+
+.PREBTN {
+	position: absolute;
+	left: 50%;
+	margin-left: -.125rem;
+	bottom: .25rem;
+	z-index: 999;
+	width: .25rem;
+	height: .2rem;
+	animation: PREBTN_MOVE .6s linear infinite both
+}
+
+@keyframes PREBTN_MOVE {
+	0% {
+		transform: translateY(0)
+	}
+
+	100% {
+		transform: translateY(-.2rem)
+	}
+}
+
+.PREBTN2 {
+	position: absolute;
+	top: 50%;
+	margin-top: -.1rem;
+	right: .25rem;
+	z-index: 999;
+	width: .25rem;
+	height: .2rem;
+	transform: rotate(-90deg);
+	animation: PREBTN_MOVE2 .6s linear infinite both;
+}
+
+@keyframes PREBTN_MOVE2 {
+	0% {
+		transform: rotate(-90deg) translateY(0)
+	}
+
+	100% {
+		transform: rotate(-90deg) translateY(.25rem)
+	}
+}
+
+.MUSICBTN {
+	display: block;
+	position: absolute;
+	right: .15rem;
+	top: .15rem;
+	z-index: 999;
+	width: .3rem;
+	height: .3rem;
+	background: url("../image/music.svg") no-repeat;
+	background-size: 100% 100%
+}
+
+.MUSICBTN.MOVE {
+	animation: MUSICBTN_MOVE 1s linear infinite both
+}
+
+@keyframes MUSICBTN_MOVE {
+	from {
+		transform: rotate(0deg)
+	}
+
+	to {
+		transform: rotate(360deg)
+	}
+}
