@@ -124,4 +124,65 @@ let SWIPER_RENDER = (function () {
 		}
 	}
 })();
-SWIPER_RENDER.init();
+
+let LOADING_RENDER = (function () {
+	let LOADINGBOX = document.querySelector('#LOADINGBOX'),
+		CURRENT = document.querySelector('#CURRENT'),
+		MAINBOX = document.querySelector('#MAINBOX'),
+		IMGDATA = window.CONFIG.LOADING;
+
+	let n = 0,
+		len = IMGDATA.length;
+
+	let run = function run(callback) {
+		IMGDATA.forEach(item => {
+			let tempImg = new Image;
+			tempImg.onload = () => {
+				tempImg = null;
+				CURRENT.innerHTML = Math.ceil(((++n) / len) * 100) + '%';
+				if (n === len) {
+					clearTimeout(delayTimer);
+					callback && callback();
+				}
+			};
+			tempImg.src = item;
+		});
+	};
+
+	let delayTimer = null;
+	let maxDelay = function maxDelay(callback) {
+		delayTimer = setTimeout(() => {
+			clearTimeout(delayTimer);
+			if (n / len >= 0.9) {
+				CURRENT.innerHTML = '100%';
+				callback && callback();
+				return;
+			}
+		}, 600000);
+	};
+
+	let done = function done() {
+		let timer = setTimeout(() => {
+			document.body.removeChild(LOADINGBOX);
+			MAINBOX.style.display = 'block';
+			clearTimeout(timer);
+			SWIPER_RENDER.init();
+		}, 1000);
+	};
+
+	return {
+		init: function () {
+			MAINBOX.style.display = 'none';
+			if (len === 0) {
+				document.body.removeChild(LOADINGBOX);
+				MAINBOX.style.display = 'block';
+				SWIPER_RENDER.init();
+				return;
+			}
+			run(done);
+			maxDelay(done);
+		}
+	}
+})();
+
+LOADING_RENDER.init();

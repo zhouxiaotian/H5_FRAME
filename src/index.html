@@ -3,7 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>H5场景应用案例-珠峰培训</title>
 
@@ -20,7 +21,9 @@
 			// 音乐地址
 			MUSIC: '',
 			// 参照尺寸
-			DESW: 375
+			DESW: 375,
+			// 预加载图片
+			LOADING: []
 		};
 	</script>
 
@@ -28,19 +31,30 @@
 </head>
 
 <body>
+	<!-- LOADING -->
+	<div id="LOADINGBOX"
+		style="position: fixed;top:0;left:0;z-index:999;width: 100%;height: 100%;background: #000;overflow: hidden;">
+		<img src="http://img.zhufengpeixun.cn/loading/loading.gif" alt=""
+			style="position:absolute;width:100%;top: 1rem;left: 0;">
+		<p style="color: #AAA;position:absolute;width:100%;top: 8rem;left: 0;text-align: center;font-size: .32rem;">
+			当前已经加载：
+			<span id="CURRENT">0%</span>
+		</p>
+	</div>
+
 	<!-- MAIN #MAINBOX -->
 	<main class="mainBox" id="MAINBOX">
 		<!-- PAGE1 -->
 		<div class="page1">
-			
+
 		</div>
 		<!-- PAGE2 -->
 		<div class="page2">
-			
+
 		</div>
 		<!-- PAGE3 -->
 		<div class="page3">
-			
+
 		</div>
 	</main>
 

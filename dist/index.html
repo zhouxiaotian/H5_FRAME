@@ -10,44 +10,54 @@
 	<!-- CONFIG JS （IMPORTANT）-->
 	<script>
 		window.CONFIG = {
+			// 滑屏页面中的配置信息
 			CON: {
+				// horizontal：水平切换   vertical：垂直切换
 				DIRECTION: 'vertical',
+				// 切换效果支持：slide普通  fade淡入 cube方块 coverflow流3D flip翻转 
 				EFFECT: 'slide'
 			},
+			// 音乐地址
 			MUSIC: '',
-			DESW: 375
+			// 参照尺寸
+			DESW: 375,
+			// 预加载图片
+			LOADING: []
 		};
 	</script>
 
 	<!-- IMPORT CSS -->
-	<link rel="stylesheet" href="main.bcf623838f1d6c12a78c.css">
-	<link rel="stylesheet" href="index.css">
-</head>
+<link href="main.bcf623838f1d6c12a78c.css?22f4ea8c9f528221acdf" rel="stylesheet"></head>
 
 <body>
+	<!-- LOADING -->
+	<div id="LOADINGBOX"
+		style="position: fixed;top:0;left:0;z-index:999;width: 100%;height: 100%;background: #000;overflow: hidden;">
+		<img src="http://img.zhufengpeixun.cn/loading/loading.gif" alt=""
+			style="position:absolute;width:100%;top: 1rem;left: 0;">
+		<p style="color: #AAA;position:absolute;width:100%;top: 8rem;left: 0;text-align: center;font-size: .32rem;">
+			当前已经加载：
+			<span id="CURRENT">0%</span>
+		</p>
+	</div>
+
 	<!-- MAIN #MAINBOX -->
 	<main class="mainBox" id="MAINBOX">
 		<!-- PAGE1 -->
 		<div class="page1">
-			<div class="box1 ani" swiper-animate-effect='bounceInLeft' swiper-animate-duration='1s'
-				swiper-animate-delay='0s'></div>
 
-			<div class="box2 ani" swiper-animate-effect='AA' swiper-animate-count='infinite'>
-			</div>
 		</div>
 		<!-- PAGE2 -->
-		<div class="page2" style="background:lightcoral">
-			2
+		<div class="page2">
+
 		</div>
 		<!-- PAGE3 -->
-		<div class="page3" style="background: lightgoldenrodyellow">
-			3
+		<div class="page3">
+
 		</div>
 	</main>
 
 	<!-- IMPORT JS -->
-	<script type="text/javascript" src="runtime.eb9762bffc276c701715.js"></script>
-	<script type="text/javascript" src="main.3f7931782eae73fc402a.js"></script>
-</body>
+<script type="text/javascript" src="runtime.eb9762bffc276c701715.js?22f4ea8c9f528221acdf"></script><script type="text/javascript" src="main.f225d2ac5b66945cb7e0.js?22f4ea8c9f528221acdf"></script></body>
 
 </html>
